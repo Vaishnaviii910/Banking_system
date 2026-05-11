@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ledgerSchema = new mongoose.schema({
+const ledgerSchema = new mongoose.Schema({
     account:{
         type: mongoose.Schema.Types.ObjectId,
         ref:"account",
@@ -46,4 +46,4 @@ ledgerSchema.pre('findOneAndReplace', preventLedgerModification);
 
 const ledgerModel = mongoose.model('ledger', ledgerSchema);
 
-model.exports = ledgerModel;
+module.exports = ledgerModel;
